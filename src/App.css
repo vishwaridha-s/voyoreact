@@ -1,0 +1,34 @@
+body {
+  background: #000;
+  color: #fff;
+}
+
+nav {
+  background: #000;
+  border-bottom: 1px solid #ff8800;
+}
+
+button, .btn {
+  background: #000;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.2s, color 0.2s;
+}
+
+button.bg-orange-500, .btn.bg-orange-500 {
+  background: #ff8800 !important;
+  color: #fff !important;
+  border: 1px solid #ff8800;
+}
+
+button:hover, .btn:hover {
+  background: #ff8800 !important;
+  color: #fff !important;
+}
+
+.text-orange-500 { color: #ff8800; }
+.text-orange-400 { color: #ffa733; }
+.bg-black { background: #000; }
+.border-orange-500 { border-color: #ff8800; }
