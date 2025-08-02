@@ -12,14 +12,14 @@ function AdminDashboard() {
   }, []);
 
   const fetchPlaces = () => {
-    axios.get('http://localhost:8080/places/all')
+    axios.get(' https://voyo.onrender.com/places/all')
       .then(res => setPlaces(res.data))
       .catch(err => console.error(err));
   };
 
   const handleDelete = (id) => {
     if (window.confirm('Are you sure you want to delete this place?')) {
-      axios.delete(`http://localhost:8080/places/delete/${id}`)
+      axios.delete(` https://voyo.onrender.com/places/delete/${id}`)
         .then(() => {
           setPlaces(prev => prev.filter(place => place.id !== id));
         })
@@ -59,7 +59,7 @@ function AdminDashboard() {
             {places.map(place => (
               <div key={place.id} className="place-card">
                 <img
-                  src={`http://localhost:8080/places/image/${place.id}`}
+                  src={`https://voyo.onrender.com/places/image/${place.id}`}
                   alt={place.location}
                 />
                 <h2>{place.location}</h2>

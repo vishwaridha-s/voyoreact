@@ -10,7 +10,7 @@ function UserPlaces() {
   const userId = localStorage.getItem("userId");
 
   const fetchAllPlaces = () => {
-    axios.get('http://localhost:8080/user-places/places')
+    axios.get(' https://voyo.onrender.com/user-places/places')
       .then(res => setPlaces(res.data))
       .catch(err => console.error(err));
   };
@@ -21,7 +21,7 @@ function UserPlaces() {
       return;
     }
 
-    axios.get(`http://localhost:8080/user-places/places/search?keyword=${keyword}`)
+    axios.get(` https://voyo.onrender.com/user-places/places/search?keyword=${keyword}`)
       .then(res => setPlaces(res.data))
       .catch(err => console.error(err));
   };

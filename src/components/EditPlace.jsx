@@ -10,7 +10,7 @@ function EditPlace() {
   
 
   useEffect(() => {
-    axios.get(`http://localhost:8080/places/${id}`)
+    axios.get(` https://voyo.onrender.com/places/${id}`)
       .then(res => setPlace(res.data))
       .catch(err => console.error(err));
   }, [id]);
@@ -23,7 +23,7 @@ function EditPlace() {
     if (image) formData.append('image', image);
 
     try {
-      await axios.put(`http://localhost:8080/places/update/${id}`, formData, {
+      await axios.put(` https://voyo.onrender.com/places/update/${id}`, formData, {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
       navigate('/places');

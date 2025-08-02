@@ -10,7 +10,7 @@ function Profile() {
 
   useEffect(() => {
     if (userId) {
-      axios.get(`http://localhost:8080/voyo/user/${userId}`)
+      axios.get(`https://voyo.onrender.com/voyo/user/${userId}`)
         .then(res => setUser(res.data))
         .catch(err => console.error("Failed to load user profile", err));
     }

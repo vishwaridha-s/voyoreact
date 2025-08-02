@@ -39,7 +39,7 @@ function AddPlace() {
     data.append("image", formData.image);
 
     try {
-      const res = await axios.post("http://localhost:8080/places/add", data, {
+      const res = await axios.post(" https://voyo.onrender.com/places/add", data, {
         headers: {
           "Content-Type": "multipart/form-data"
         }

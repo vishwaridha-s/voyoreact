@@ -9,7 +9,7 @@ function ViewPlace() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`http://localhost:8080/places/${id}`)
+    axios.get(`https://voyo.onrender.com/places/${id}`)
       .then(res => setPlace(res.data))
       .catch(err => console.error(err));
   }, [id]);
@@ -26,7 +26,7 @@ function ViewPlace() {
       </button>
       <h1 className="text-2xl font-bold">{place.name}</h1>
       <img
-        src={`http://localhost:8080/places/image/${place.id}`}
+        src={` https://voyo.onrender.com/places/image/${place.id}`}
         alt="Place"
         className="w-full max-w-lg h-auto my-4"
       />
