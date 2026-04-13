@@ -17,7 +17,7 @@ function MyBucketList() {
   };
 
   const handleDelete = (placeId) => {
-    axios.delete(`https://voyoge.onrender.com/removefromlist/${userId}/${placeId}`)
+    axios.delete(`https://voyoge.onrender.com/user-places/removefromlist/${userId}/${placeId}`)
       .then(() => {
         fetchBucketList();
       })

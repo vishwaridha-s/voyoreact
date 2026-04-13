@@ -14,7 +14,7 @@ function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('https://voyoge.onrender.com/register', form);
+      await axios.post('https://voyoge.onrender.com/voyo/register', form);
       alert('Registered successfully');
       navigate('/login');
     } catch (error) {
