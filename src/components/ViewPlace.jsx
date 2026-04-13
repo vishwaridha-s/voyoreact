@@ -34,7 +34,7 @@ function ViewPlace() {
 
       <div className="card" style={{ padding: '0', overflow: 'hidden' }}>
         <img
-          src={`hhttps://voyoge.onrender.com/places/image/${place.id}`}
+          src={`https://voyoge.onrender.com/places/image/${place.id}`}
           alt={place.location}
           style={{ width: '100%', maxHeight: '450px', objectFit: 'cover' }}
         />

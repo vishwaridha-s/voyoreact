@@ -10,7 +10,7 @@ function UserNavBar() {
 
   useEffect(() => {
     if (userId && !localStorage.getItem('userRole')) {
-      axios.get(`https://voyoge.onrender.com/user/${userId}`)
+      axios.get(`https://voyoge.onrender.com/voyo/user/${userId}`)
         .then(res => {
           setRole(res.data.role);
           localStorage.setItem('userRole', res.data.role);

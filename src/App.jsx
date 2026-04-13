@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import "./App.css"; 
+import "./App.css";
 import Login from './components/Login';
 import Register from './components/Register';
 import AdminDashboard from './components/AdminDashboard';
@@ -8,7 +8,7 @@ import UserPlaces from './components/UserPlaces';
 import AddPlace from './components/AddPlace';
 import EditPlace from './components/EditPlace';
 import ViewPlace from './components/ViewPlace';
-import Profile from './components/Profile'; 
+import Profile from './components/Profile';
 import MyBucketList from './components/MyBucketList';
 import MyMemories from './components/MyMemories';
 
@@ -27,7 +27,7 @@ function App() {
         <Route path="/user-places" element={<UserPlaces />} />
         <Route path="/places/edit/:id" element={<EditPlace />} />
         <Route path="/places/view/:id" element={<ViewPlace />} />
-         <Route path="/admin/profile" element={<Profile />} /> 
+        <Route path="/admin/profile" element={<Profile />} />
         <Route path="/mybucket" element={<MyBucketList />} />
         <Route path="/memories" element={<MyMemories />} />
 
