@@ -14,7 +14,7 @@ function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:8080/voyo/register', form);
+      await axios.post('https://voyoge.onrender.com/register', form);
       alert('Registered successfully');
       navigate('/login');
     } catch (error) {
@@ -47,21 +47,21 @@ function Register() {
               <span>☁️</span>
               <div>
                 <strong>Playful</strong>
-                <p>soft pastel feel</p>
+                <p>wander</p>
               </div>
             </div>
             <div className="stat-card">
               <span>🌸</span>
               <div>
                 <strong>Filled</strong>
-                <p>no empty spaces</p>
+                <p>dream</p>
               </div>
             </div>
             <div className="stat-card">
               <span>💖</span>
               <div>
                 <strong>Fun</strong>
-                <p>icons & animations</p>
+                <p>discover</p>
               </div>
             </div>
           </div>

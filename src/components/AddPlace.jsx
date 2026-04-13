@@ -47,7 +47,7 @@ function AddPlace() {
 
     try {
       const res = await axios.post(
-        "http://localhost:8080/places/add",
+        "https://voyoge.onrender.com/places/add",
         data
       );
 

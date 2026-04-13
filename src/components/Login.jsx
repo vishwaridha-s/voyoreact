@@ -14,7 +14,7 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:8080/voyo/login', form);
+      const res = await axios.post('https://voyoge.onrender.com/voyo/login', form);
 
       const user = res.data;
 

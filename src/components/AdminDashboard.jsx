@@ -13,14 +13,14 @@ function AdminDashboard() {
   }, []);
 
   const fetchPlaces = () => {
-    axios.get('http://localhost:8080/places/all')
+    axios.get('https://voyoge.onrender.com/places/all')
       .then(res => setPlaces(res.data))
       .catch(err => console.error(err));
   };
 
   const handleDelete = (id) => {
     if (window.confirm('Are you sure you want to delete this place?')) {
-      axios.delete(`http://localhost:8080/places/delete/${id}`)
+      axios.delete(`https://voyoge.onrender.com/places/delete/${id}`)
         .then(() => {
           setPlaces(prev => prev.filter(place => place.id !== id));
         })
@@ -51,7 +51,7 @@ function AdminDashboard() {
               <div key={place.id} className="card animate-fade-in" style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                 <div style={{ position: 'relative' }}>
                   <img
-                    src={`http://localhost:8080/places/image/${place.id}`}
+                    src={`https://voyoge.onrender.com/places/image/${place.id}`}
                     alt={place.location}
                     style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: 'var(--radius-md)' }}
                   />

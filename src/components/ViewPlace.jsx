@@ -9,7 +9,7 @@ function ViewPlace() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`http://localhost:8080/places/${id}`)
+    axios.get(`https://voyoge.onrender.com/places/${id}`)
       .then(res => setPlace(res.data))
       .catch(err => console.error(err));
   }, [id]);
@@ -34,7 +34,7 @@ function ViewPlace() {
 
       <div className="card" style={{ padding: '0', overflow: 'hidden' }}>
         <img
-          src={`http://localhost:8080/places/image/${place.id}`}
+          src={`hhttps://voyoge.onrender.com/places/image/${place.id}`}
           alt={place.location}
           style={{ width: '100%', maxHeight: '450px', objectFit: 'cover' }}
         />

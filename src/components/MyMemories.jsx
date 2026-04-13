@@ -19,7 +19,7 @@ function MyMemories() {
   const [saving, setSaving] = useState(false);
   const userId = localStorage.getItem('userId');
 
-  const apiBase = 'http://localhost:8080';
+  const apiBase = 'https://voyoge.onrender.com';
 
   useEffect(() => {
     if (userId) {

@@ -11,7 +11,7 @@ function Profile() {
   const [loadingMemories, setLoadingMemories] = useState(true);
   const userId = localStorage.getItem('userId');
   const navigate = useNavigate();
-  const apiBase = 'http://localhost:8080';
+  const apiBase = 'https://voyoge.onrender.com';
 
   useEffect(() => {
     if (!userId) {

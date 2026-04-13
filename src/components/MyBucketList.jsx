@@ -11,13 +11,13 @@ function MyBucketList() {
   }, [userId]);
 
   const fetchBucketList = () => {
-    axios.get(`http://localhost:8080/user-places/mylist/${userId}`)
+    axios.get(`https://voyoge.onrender.com/user-places/mylist/${userId}`)
       .then(res => setBucketList(res.data))
       .catch(err => console.error(err));
   };
 
   const handleDelete = (placeId) => {
-    axios.delete(`http://localhost:8080/user-places/removefromlist/${userId}/${placeId}`)
+    axios.delete(`https://voyoge.onrender.com/removefromlist/${userId}/${placeId}`)
       .then(() => {
         fetchBucketList();
       })

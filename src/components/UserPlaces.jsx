@@ -10,7 +10,7 @@ function UserPlaces() {
   const userId = localStorage.getItem("userId");
 
   const fetchAllPlaces = () => {
-    axios.get('http://localhost:8080/user-places/places')
+    axios.get('https://voyoge.onrender.com/user-places/places')
       .then(res => setPlaces(res.data))
       .catch(err => console.error(err));
   };
@@ -21,7 +21,7 @@ function UserPlaces() {
       return;
     }
 
-    axios.get(`http://localhost:8080/user-places/places/search?keyword=${keyword}`)
+    axios.get(`https://voyoge.onrender.com/user-places/places/search?keyword=${keyword}`)
       .then(res => setPlaces(res.data))
       .catch(err => console.error(err));
   };
@@ -31,7 +31,7 @@ function UserPlaces() {
   }, []);
 
   const handleAdd = (placeId) => {
-    axios.post(`http://localhost:8080/user-places/addtolist/${userId}/${placeId}`)
+    axios.post(`https://voyoge.onrender.com/user-places/addtolist/${userId}/${placeId}`)
       .then(() => alert("Added to Bucket List"))
       .catch(err => console.error(err));
   };
@@ -71,7 +71,7 @@ function UserPlaces() {
               <div key={place.id} className="card animate-fade-in" style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                 <div style={{ position: 'relative' }}>
                   <img
-                    src={`http://localhost:8080/places/image/${place.id}`}
+                    src={`https://voyoge.onrender.com/places/image/${place.id}`}
                     alt={place.location}
                     style={{ width: '100%', height: '220px', objectFit: 'cover', borderRadius: 'var(--radius-md)' }}
                   />
