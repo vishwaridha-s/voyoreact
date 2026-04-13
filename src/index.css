@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;700&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary: #ff8cc4;
+  --primary-hover: #fd6abf;
+  --primary-light: #ffd9ed;
+  --primary-dark: #c41f7b;
+  
+  --secondary: #923a79;
+  --secondary-hover: #7b2b67;
+  
+  --bg-main: #fff7fb;
+  --bg-card: rgba(255, 255, 255, 0.95);
+  --bg-gradient: linear-gradient(180deg, #fffafa 0%, #ffe9f6 100%);
+  
+  --text-main: #4b2a4d;
+  --text-muted: #7e5c81;
+  --text-accent: #d5439c;
+  
+  --border-color: rgba(253, 106, 191, 0.35);
+  --border-light: rgba(253, 106, 191, 0.15);
+  
+  --shadow-sm: 0 4px 6px rgba(253, 106, 191, 0.05);
+  --shadow-md: 0 10px 30px rgba(253, 106, 191, 0.1);
+  --shadow-lg: 0 24px 60px rgba(253, 106, 191, 0.18);
+  
+  --radius-sm: 12px;
+  --radius-md: 24px;
+  --radius-lg: 32px;
+  --radius-xl: 44px;
+  --radius-full: 999px;
+  
+  --font-main: 'Comfortaa', cursive;
+  --font-heading: 'Quicksand', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  min-height: 100vh;
+}
+
+body {
+  background: var(--bg-gradient);
+  background-attachment: fixed;
+  color: var(--text-main);
+  font-family: var(--font-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+button {
+  font-family: var(--font-main);
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  outline: none;
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+input, textarea, select {
+  font-family: var(--font-main);
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+input::placeholder {
+  color: #c9a9c9;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-light);
+  border-radius: 10px;
+  border: 3px solid var(--bg-main);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
